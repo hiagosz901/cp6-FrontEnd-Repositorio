@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hiago Silva de Oliveira — Desenvolvedor web</title>
+<meta name="description" content="Portfólio de Hiago Silva de Oliveira, estudante de Engenharia de Software na FIAP. Sites e soluções digitais.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hiago Silva de Oliveira — Desenvolvedor web">
+<meta property="og:description" content="Estudante de Engenharia de Software na FIAP. Sites e soluções digitais.">
+<meta name="theme-color" content="#efede8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e0e0d" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111110'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23efede8'%3EH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+/* marca que há JS (os estados "escondidos" das animações só valem com JS) e aplica o tema salvo antes de pintar */
+document.documentElement.classList.add("js");
+try{var t=localStorage.getItem("tema");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#trabalhos">Pular para o conteúdo</a>
+<header>
+  <a class="brand" href="#top">Hiago S. Oliveira</a>
+  <nav aria-label="Principal">
+    <a class="roll" href="#trabalhos"><span>Trabalhos</span><span aria-hidden="true">Trabalhos</span></a>
+    <a class="roll" href="#sobre"><span>Sobre</span><span aria-hidden="true">Sobre</span></a>
+    <a class="roll" href="#experiencia"><span>Experiência</span><span aria-hidden="true">Experiência</span></a>
+    <a class="roll" href="#contato"><span>Contato</span><span aria-hidden="true">Contato</span></a>
+  </nav>
+  <div class="right">
+    <span id="clock" class="mono" style="color:inherit"></span>
+    <button type="button" class="roll js-theme" aria-label="Alternar tema claro e escuro"><span>Tema</span><span aria-hidden="true">Claro/Escuro</span></button>
+    <button type="button" class="roll js-mail" aria-label="Copiar e-mail"><span>E-mail</span><span aria-hidden="true">Copiar</span></button>
+    <button type="button" id="menubtn" aria-expanded="false" aria-controls="menu"><span>Menu</span></button>
+  </div>
+</header>
+<nav id="menu" aria-label="Menu">
+  <a href="#trabalhos">Trabalhos</a><a href="#sobre">Sobre</a><a href="#experiencia">Experiência</a><a href="#contato">Contato</a>
+  <div class="sub"><button type="button" class="js-theme">Alternar tema</button><button type="button" class="js-mail">Copiar e-mail</button></div>
+</nav>
+
+<main id="top">
+<section class="hero wrap" aria-labelledby="nome">
+  <h1 id="nome" aria-label="Hiago Silva de Oliveira"><span class="ln"><i aria-hidden="true">Hiago Silva</i></span><span class="ln"><i aria-hidden="true">de Oliveira</i></span></h1>
+  <div class="hero-meta">
+    <p class="lead" id="intro"></p>
+    <div class="mono">Portfólio<br>2026</div>
+    <div class="mono scroll" aria-hidden="true"><b></b>Role</div>
+  </div>
+</section>
+
+<section id="trabalhos" class="wrap" aria-labelledby="t-trabalhos">
+  <div class="work-head"><h2 id="t-trabalhos">Trabalhos selecionados</h2><span class="mono" id="count-all"></span></div>
+  <div id="counter" class="mono" aria-hidden="true"><span>01 /00</span></div>
+  <div id="list"></div>
+  <noscript><p class="nojs">Os projetos são carregados com JavaScript. Ative-o para ver o portfólio completo.</p></noscript>
+</section>
+
+<section id="sobre" class="wrap" aria-label="Sobre">
+  <div class="about">
+    <div class="mono">Sobre</div>
+    <p id="about-text"></p>
+  </div>
+</section>
+
+<section id="experiencia" class="wrap exp" aria-labelledby="t-exp">
+  <h2 id="t-exp">Experiência</h2>
+  <div id="exp"></div>
+</section>
+
+<section id="contato" class="wrap contact" aria-labelledby="t-contato">
+  <div class="mono" data-r>Contato</div>
+  <h2 id="t-contato" data-r>Vamos<br>conversar</h2>
+  <button type="button" class="big js-mail" id="mail-big" data-r></button>
+  <div class="links" id="links"></div>
+  <footer><span id="foot"></span><a href="#top">Voltar ao topo ↑</a></footer>
+</section>
+</main>
+<div id="cursor" aria-hidden="true">Ver</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="src/main.js"></script>
+</body>
+</html>

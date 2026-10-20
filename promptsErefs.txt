@@ -1,0 +1,22 @@
+Referencia:
+sites: https://huyml.co/ / https://signal-a.studio/
+Obs: fiz com 100% de referencia nesses 2 sites,
+coloquei imagens do site e o link no prompt, coloque a skill impecable
+
+PROMPT: crie um site de repositorio, e pegue como referencia esses dois links e as imagens que foram enviadas.
+
+PROMPT 2: crie um aquivo css, e separe o html e faça a ordem dos arquivos de forma profissonal, criando pasta para separar html, css,  src, img e etc
+
+PROMPT 3:
+
+ Troque o nome  NEXXAS SUPLEMENTOS
+para HighFlowTech e coloque esse link
+
+Troque o nome  Hugger Burger
+para  Força zero e coloque esse link https://ebook-forca-zero.vercel.app/
+
+Troque o nome  Hikar - Captaçao
+para Projeto 90 dias e coloque esse link https://projeto90dias-rosy.vercel.app/
+
+e coloca a imagen de cada 1 na capa de cada trabalho  
+
