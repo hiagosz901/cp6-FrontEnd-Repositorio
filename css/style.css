@@ -55,6 +55,12 @@ header nav a{color:var(--mut);transition:color .3s}header nav a:hover{color:#fff
 .g span{display:flex;align-items:center;gap:56px;padding-right:56px;font-weight:800;text-transform:uppercase;font-size:clamp(20px,3vw,40px);letter-spacing:-.02em;white-space:nowrap}
 .g span::after{content:"";width:12px;height:12px;border-radius:50%;background:#000}
 @keyframes mq{to{transform:translateX(-50%)}}
+/* skills */
+.skills{padding-top:clamp(80px,12vw,180px)}
+.skill-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,56px);margin-top:clamp(28px,4vw,56px)}
+.skill-group h3{font-weight:700;font-size:clamp(18px,2vw,24px);margin-bottom:16px}
+.skill-list{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0}
+.skill-list li{border:1px solid var(--line);border-radius:99px;padding:12px 20px;color:#d4d4d4;font-size:clamp(15px,1.5vw,20px)}
 /* work */
 .work{padding-top:clamp(80px,12vw,180px)}
 .work-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(28px,4vw,56px)}
@@ -136,6 +142,7 @@ footer{display:flex;justify-content:space-between;gap:16px;padding:24px 0 calc(2
  #cursor{display:none}
  footer{flex-direction:column}
 }
+@media (max-width:600px){.skill-groups{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01ms!important;transition-delay:0s!important;animation:none!important}.js [data-r],.js .lead,.js .cta,.js .card{opacity:1;transform:none}.js .ln i{transform:none}.about p span{opacity:1}}
 
 .hero{background:#000}
