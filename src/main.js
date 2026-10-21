@@ -11,9 +11,10 @@ const CONFIG = {
   nome: "Hiago Silva de Oliveira",
   intro: "Estudante de Engenharia de Software na FIAP e Jovem Aprendiz na XP Inc. Desenvolvo projetos web e soluções digitais.",
   sobre: "Sou Hiago Silva de Oliveira, estudante de Engenharia de Software na FIAP e Jovem Aprendiz na XP Inc., na área de Governança de Operações. Também desenvolvo projetos web e soluções digitais.",
-  email: "",        // ex.: "voce@email.com"
-  whatsapp: "",     // ex.: "5511999999999" (DDI + DDD + número)
-  linkedin: "",     // ex.: "https://www.linkedin.com/in/seu-perfil"
+  email: "profissionalhiago01@gmail.com",
+  telefone: "11 94714-6300",
+  whatsapp: "",
+  linkedin: "https://www.linkedin.com/in/hiago-silva-de-oliveira/",
   github: "",       // ex.: "https://github.com/seu-usuario"
   cidade: "São Paulo", fuso: "America/Sao_Paulo"
 };
@@ -98,9 +99,10 @@ $("#about-text").innerHTML=CONFIG.sobre.split(" ").map(w=>`<span>${esc(w)}</span
 const words=$$("#about-text span");
 
 /* contatos: só aparece o que estiver preenchido */
-const mail=(CONFIG.email||"").trim(), wa=(CONFIG.whatsapp||"").replace(/\D/g,"");
+const mail=(CONFIG.email||"").trim(), wa=(CONFIG.whatsapp||"").replace(/\D/g,""), phone=(CONFIG.telefone||"").trim(), phoneDigits=phone.replace(/\D/g,"");
 const contatos=[];
 if(mail)contatos.push(["E-mail",`<a href="mailto:${esc(mail)}">${esc(mail)}</a>`]);
+if(phoneDigits)contatos.push(["Telefone",`<a href="tel:${phoneDigits}">${esc(phone)}</a>`]);
 if(wa)contatos.push(["WhatsApp",`<a href="https://wa.me/${wa}" target="_blank" rel="noopener">Abrir conversa ↗</a>`]);
 if(safeUrl(CONFIG.linkedin))contatos.push(["LinkedIn",`<a href="${esc(safeUrl(CONFIG.linkedin))}" target="_blank" rel="noopener">Abrir ↗</a>`]);
 if(safeUrl(CONFIG.github))contatos.push(["GitHub",`<a href="${esc(safeUrl(CONFIG.github))}" target="_blank" rel="noopener">Abrir ↗</a>`]);
